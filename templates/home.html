@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("#div1").load("http://iot.buildfromzero.com/api/map/?format=json");
+    $("#div1").load("http://kranioz.com/api/map/?format=json");
 
 });
 </script>
@@ -33,7 +34,9 @@ $(document).ready(function(){
 
 
 <h2 style="text-align: center"> Technorip IoT | <a href="/api/" target="_blank">APIs</a> | <a href="/api/create/" target="_blank">Create</a> |
-    <a href="/latest/" target="_blank">Latest</a> | GET (/log/?lat=value1&lng=value2&device_id=value3)</h2>
+    <a href="/latest/" target="_blank">Latest</a> | GET (/log/?lat=value1&lng=value2&id=value3&bat=value3)
+    <a href="/logout/">Logout</a>
+</h2>
 
 
 
@@ -72,8 +75,8 @@ $(document).ready(function(){
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 3,
-          center: {lat: 0, lng: -180},
+          zoom: 17,
+          center: {lat: 10.055788, lng: 76.356153},
           mapTypeId: 'terrain'
         });
 
@@ -100,11 +103,11 @@ $(document).ready(function(){
 
 <br>
 <h4 style="text-align: center">Json Data Using Ajax </h4>
-<h3 style="text-align: center">http://iot.buildfromzero.com/api/map/?format=json</h3>
+<h3 style="text-align: center">http://kranioz.com/api/map/?format=json</h3>
 <div id="div1" style="text-align: center"></div>
 
 <br>
-<h1 style="text-align: center">Data Table</h1>
+<h1 style="text-align: center">Data log Table</h1>
 
     <table class="table table-hover">
 
@@ -114,7 +117,7 @@ $(document).ready(function(){
             <th>Device ID</th>
             <th>Latitude</th>
             <th>Longitude</th>
-            <th>Speed</th>
+            <th>Battery Level</th>
         </tr>
         </thead>
         <tbody>
@@ -125,7 +128,7 @@ $(document).ready(function(){
                 <td>{{ object.deviceId }}</td>
                 <td> {{ object.lat }} </td>
                 <td> {{ object.lng }} </td>
-            <td>  {{ object.speed }} km/hr </td>
+            <td>  {{ object.speed }} %</td>
 
             </tr>
 

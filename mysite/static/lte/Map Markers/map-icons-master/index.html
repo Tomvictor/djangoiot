@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Map Icons</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+	<!-- Search Engines -->
+	<meta name="revisit-after" content="1 day">
+	<meta name="robots" content="all">
+	<meta name="description" content="An icon font for use with Google Maps API and Google Places API using SVG markers and icon labels. Map Icons makes Google Maps Markers dynamic with control over shape, color, size, and icon easily changed using options in the marker object as well as simple SVG Notation and CSS.">
+	<meta name="keywords" content="map, icons, google maps, svg, icon, font, scott de jonge">
+
+	<!-- Open Graph -->
+	<meta property="og:site_name" content="Map Icons">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Map Icons">
+	<meta property="og:url" content="http://map-icons.com/" />
+	<meta property="og:description" content="An icon font for use with Google Maps API and Google Places API using SVG markers and icon labels. Map Icons makes Google Maps Markers dynamic with control over shape, color, size, and icon easily changed using options in the marker object as well as simple SVG Notation and CSS.">
+	<meta property="og:image" content="http://map-icons.com/docs/images/social.png" />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@map_icons">
+	<meta name="twitter:creator" content="@scottdejonge">
+	<meta name="twitter:title" content="Map Icons">
+	<meta name="twitter:description" content="An icon font for use with Google Maps API and Google Places API using SVG markers and icon labels. Map Icons makes Google Maps Markers dynamic with control over shape, color, size, and icon easily changed using options in the marker object as well as simple SVG Notation and CSS.">
+	<meta name="twitter:image:src" content="http://map-icons.com/docs/images/social.png" />
+	
+	<!-- Icon -->
+	<link rel="shortcut" href="favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="docs/css/main.css">
+
+	<!-- Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	
+	<!-- Map Icons -->
+	<link rel="stylesheet" type="text/css" href="dist/css/map-icons.css">
+	<script type="text/javascript" src="dist/js/map-icons.js"></script>
+
+	<!-- Example -->
+	<script type="text/javascript" src="example/example.js"></script>
+	
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-43021276-1', 'map-icons.com');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+<body>
+
+	<header class="header">
+		<div class="container">
+			<h1>Map Icons</h1>
+			<p class="lead">An icon font for use with Google Maps API and Google Places API using SVG markers and icon labels</p>
+			<a class="button button-large button-secondary" href="https://github.com/scottdejonge/map-icons/archive/master.zip">Download</a>
+			<a class="button button-large button-secondary" href="https://github.com/scottdejonge/map-icons">GitHub</a>
+			<p><small>Version 3.0.2 &middot; <a href="https://twitter.com/map_icons">@map_icons</a> &middot; Created &amp; Maintained by <a href="http://twitter.com/scottdejonge">@scottdejonge</a></small></p>
+		</div>
+	</header>
+
+	<section class="map">
+		<div id="map-canvas"></div>
+	</section>
+	
+	<section class="content">
+		<div class="container">
+			<p class="lead max-width-medium">Map Icons makes <a href="https://developers.google.com/maps/documentation/javascript/reference#Marker">Google Maps Markers</a> dynamic with control over shape, color, size, and icon easily changed using options in the marker object as well as simple <a href="http://www.w3.org/TR/SVG/paths.html#PathData">SVG Notation</a> and CSS.</p>
+			<div class="row">
+				<div class="column-1-3 margin-top-medium">
+					<h3><span class="map-icon map-icon-map-pin"></span> Made for Google</h3>
+					<p class="max-width-xsmall">Plug in and play immediately with <a href="https://developers.google.com/maps/">Google Maps</a> and <a href="https://developers.google.com/places/documentation/">Google Places</a>.</p>
+				</div>
+				<div class="column-1-3 margin-top-medium">
+					<h3><span class="map-icon map-icon-school"></span> CSS Control</h3>
+					<p class="max-width-xsmall">Easily style icon color, size, shadow, and anything that's possible with CSS.</p>
+				</div>
+				<div class="column-1-3 margin-top-medium">
+					<h3><span class="map-icon map-icon-fullscreen"></span> Infinite Scalability</h3>
+					<p class="max-width-xsmall">Scalable vector graphics means every icon looks awesome at any size.</p>
+				</div>
+				<div class="column-1-3 margin-top-medium">
+					<h3><span class="map-icon map-icon-search"></span> Retina Ready</h3>
+					<p class="max-width-xsmall">Vector icons look sharp on any display at any resolution.</p>
+				</div>
+				<div class="column-1-3 margin-top-medium">
+					<h3><span class="map-icon map-icon-zoom-in"></span> Over 175 Icons and Counting</h3>
+					<p class="max-width-xsmall">One font, lots and lots of icons to choose from.</p>
+				</div>
+				<div class="column-1-3 margin-top-medium">
+					<h3><span class="map-icon map-icon-wheelchair"></span> Accessibility Icons</h3>
+					<p class="max-width-xsmall">Icons for accessibility using an accessible web format, icon fonts.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="icons" class="content">
+		<div class="container">
+			<h2>Icons</h2>
+
+			<!-- General -->
+			<h3 class="block-title">General</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-art-gallery"></span>
+					<span class="icon-label">map-icon-art-gallery</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-campground"></span>
+					<span class="icon-label">map-icon-campground</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-bank"></span>
+					<span class="icon-label">map-icon-bank</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-hair-care"></span>
+					<span class="icon-label">map-icon-hair-care</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-gym"></span>
+					<span class="icon-label">map-icon-gym</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-point-of-interest"></span>
+					<span class="icon-label">map-icon-point-of-interest</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-post-box"></span>
+					<span class="icon-label">map-icon-post-box</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-post-office"></span>
+					<span class="icon-label">map-icon-post-office</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-university"></span>
+					<span class="icon-label">map-icon-university</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-beauty-salon"></span>
+					<span class="icon-label">map-icon-beauty-salon</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-atm"></span>
+					<span class="icon-label">map-icon-atm</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-rv-park"></span>
+					<span class="icon-label">map-icon-rv-park</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-school"></span>
+					<span class="icon-label">map-icon-school</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-library"></span>
+					<span class="icon-label">map-icon-library</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-spa"></span>
+					<span class="icon-label">map-icon-spa</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-route"></span>
+					<span class="icon-label">map-icon-route</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-postal-code"></span>
+					<span class="icon-label">map-icon-postal-code</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-stadium"></span>
+					<span class="icon-label">map-icon-stadium</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-postal-code-prefix"></span>
+					<span class="icon-label">map-icon-postal-code-prefix</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-museum"></span>
+					<span class="icon-label">map-icon-museum</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-finance"></span>
+					<span class="icon-label">map-icon-finance</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-natural-feature"></span>
+					<span class="icon-label">map-icon-natural-feature</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-funeral-home"></span>
+					<span class="icon-label">map-icon-funeral-home</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-cemetery"></span>
+					<span class="icon-label">map-icon-cemetery</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-park"></span>
+					<span class="icon-label">map-icon-park</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-lodging"></span>
+					<span class="icon-label">map-icon-lodging</span>
+				</li>
+			</ul>
+
+			<!-- Toilets -->
+			<h3 class="block-title">Toilets</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-female"></span>
+					<span class="icon-label">map-icon-female</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-male"></span>
+					<span class="icon-label">map-icon-male</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-unisex"></span>
+					<span class="icon-label">map-icon-unisex</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-toilet"></span>
+					<span class="icon-label">map-icon-toilet</span>
+				</li>
+			</ul>
+
+			<!-- Food -->
+			<h3 class="block-title">Food</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-bakery"></span>
+					<span class="icon-label">map-icon-bakery</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-cafe"></span>
+					<span class="icon-label">map-icon-cafe</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-restaurant"></span>
+					<span class="icon-label">map-icon-restaurant</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-food"></span>
+					<span class="icon-label">map-icon-food</span>
+				</li>
+			</ul>
+
+			<!-- Stores -->
+			<h3 class="block-title">Stores</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-liquor-store"></span>
+					<span class="icon-label">map-icon-liquor-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-bicycle-store"></span>
+					<span class="icon-label">map-icon-bicycle-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-pet-store"></span>
+					<span class="icon-label">map-icon-pet-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-hardware-store"></span>
+					<span class="icon-label">map-icon-hardware-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-book-store"></span>
+					<span class="icon-label">map-icon-book-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-furniture-store"></span>
+					<span class="icon-label">map-icon-furniture-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-department-store"></span>
+					<span class="icon-label">map-icon-department-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-electronics-store"></span>
+					<span class="icon-label">map-icon-electronics-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-jewelry-store"></span>
+					<span class="icon-label">map-icon-jewelry-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-clothing-store"></span>
+					<span class="icon-label">map-icon-clothing-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-convenience-store"></span>
+					<span class="icon-label">map-icon-convenience-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-store"></span>
+					<span class="icon-label">map-icon-store</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-shopping-mall"></span>
+					<span class="icon-label">map-icon-shopping-mall</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-movie-rental"></span>
+					<span class="icon-label">map-icon-movie-rental</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-grocery-or-supermarket"></span>
+					<span class="icon-label">map-icon-grocery-or-supermarket</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-florist"></span>
+					<span class="icon-label">map-icon-florist</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-laundry"></span>
+					<span class="icon-label">map-icon-laundry</span>
+				</li>
+			</ul>
+
+			<!-- Activities -->
+			<h3 class="block-title">Activities</h3>
+
+			<!-- Land Activities -->
+			<h4 class="block-subtitle">Land Activities</h4>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-abseiling"></span>
+					<span class="icon-label">map-icon-abseiling</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-archery"></span>
+					<span class="icon-label">map-icon-archery</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-baseball"></span>
+					<span class="icon-label">map-icon-baseball</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-bicycling"></span>
+					<span class="icon-label">map-icon-bicycling</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-climbing"></span>
+					<span class="icon-label">map-icon-climbing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-golf"></span>
+					<span class="icon-label">map-icon-golf</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-hang-gliding"></span>
+					<span class="icon-label">map-icon-hang-gliding</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-horse-riding"></span>
+					<span class="icon-label">map-icon-horse-riding</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-inline-skating"></span>
+					<span class="icon-label">map-icon-inline-skating</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-motobike-trail"></span>
+					<span class="icon-label">map-icon-motobike-trail</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-playground"></span>
+					<span class="icon-label">map-icon-playground</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-skateboarding"></span>
+					<span class="icon-label">map-icon-skateboarding</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-tennis"></span>
+					<span class="icon-label">map-icon-tennis</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-trail-walking"></span>
+					<span class="icon-label">map-icon-trail-walking</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-viewing"></span>
+					<span class="icon-label">map-icon-viewing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-walking"></span>
+					<span class="icon-label">map-icon-walking</span>
+				</li>
+			</ul>
+
+			<!-- Water Activities -->
+			<h4 class="block-subtitle">Water Activities</h4>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-boating"></span>
+					<span class="icon-label">map-icon-boating</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-boat-ramp"></span>
+					<span class="icon-label">map-icon-boat-ramp</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-boat-tour"></span>
+					<span class="icon-label">map-icon-boat-tour</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-canoe"></span>
+					<span class="icon-label">map-icon-canoe</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-diving"></span>
+					<span class="icon-label">map-icon-diving</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-fishing"></span>
+					<span class="icon-label">map-icon-fishing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-fishing-pier"></span>
+					<span class="icon-label">map-icon-fishing-pier</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-fish-cleaning"></span>
+					<span class="icon-label">map-icon-fish-cleaning</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-jet-skiing"></span>
+					<span class="icon-label">map-icon-jet-skiing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-kayaking"></span>
+					<span class="icon-label">map-icon-kayaking</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-marina"></span>
+					<span class="icon-label">map-icon-marina</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-rafting"></span>
+					<span class="icon-label">map-icon-rafting</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-sailing"></span>
+					<span class="icon-label">map-icon-sailing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-scuba-diving"></span>
+					<span class="icon-label">map-icon-scuba-diving</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-surfing"></span>
+					<span class="icon-label">map-icon-surfing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-swimming"></span>
+					<span class="icon-label">map-icon-swimming</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-waterskiing"></span>
+					<span class="icon-label">map-icon-waterskiing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-whale-watching"></span>
+					<span class="icon-label">map-icon-whale-watching</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-wind-surfing"></span>
+					<span class="icon-label">map-icon-wind-surfing</span>
+				</li>
+			</ul>
+
+			<!-- Winter Activities -->
+			<h4 class="block-subtitle">Winter Activities</h4>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-chairlift"></span>
+					<span class="icon-label">map-icon-chairlift</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-cross-country-skiing"></span>
+					<span class="icon-label">map-icon-cross-country-skiing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-ice-fishing"></span>
+					<span class="icon-label">map-icon-ice-fishing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-ice-skating"></span>
+					<span class="icon-label">map-icon-ice-skating</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-ski-jumping"></span>
+					<span class="icon-label">map-icon-ski-jumping</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-skiing"></span>
+					<span class="icon-label">map-icon-skiing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-sledding"></span>
+					<span class="icon-label">map-icon-sledding</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-snow-shoeing"></span>
+					<span class="icon-label">map-icon-snow-shoeing</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-snow"></span>
+					<span class="icon-label">map-icon-snow</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-snowboarding"></span>
+					<span class="icon-label">map-icon-snowboarding</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-snowmobile"></span>
+					<span class="icon-label">map-icon-snowmobile</span>
+				</li>
+			</ul>
+
+			<!-- Transport -->
+			<h3 class="block-title">Transport</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-train-station"></span>
+					<span class="icon-label">map-icon-train-station</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-subway-station"></span>
+					<span class="icon-label">map-icon-subway-station</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-bus-station"></span>
+					<span class="icon-label">map-icon-bus-station</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-transit-station"></span>
+					<span class="icon-label">map-icon-transit-station</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-parking"></span>
+					<span class="icon-label">map-icon-parking</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-gas-station"></span>
+					<span class="icon-label">map-icon-gas-station</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-car-rental"></span>
+					<span class="icon-label">map-icon-car-rental</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-car-dealer"></span>
+					<span class="icon-label">map-icon-car-dealer</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-car-repair"></span>
+					<span class="icon-label">map-icon-car-repair</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-car-wash"></span>
+					<span class="icon-label">map-icon-car-wash</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-airport"></span>
+					<span class="icon-label">map-icon-airport</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-taxi-stand"></span>
+					<span class="icon-label">map-icon-taxi-stand</span>
+				</li>
+			</ul>
+
+			<!-- Health -->
+			<h3 class="block-title">Health</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-health"></span>
+					<span class="icon-label">map-icon-health</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-dentist"></span>
+					<span class="icon-label">map-icon-dentist</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-doctor"></span>
+					<span class="icon-label">map-icon-doctor</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-hospital"></span>
+					<span class="icon-label">map-icon-hospital</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-pharmacy"></span>
+					<span class="icon-label">map-icon-pharmacy</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-physiotherapist"></span>
+					<span class="icon-label">map-icon-physiotherapist</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-veterinary-care"></span>
+					<span class="icon-label">map-icon-veterinary-care</span>
+				</li>
+			</ul>
+
+			<!-- Entertainment -->
+			<h3 class="block-title">Entertainment</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-bar"></span>
+					<span class="icon-label">map-icon-bar</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-amusement-park"></span>
+					<span class="icon-label">map-icon-amusement-park</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-aquarium"></span>
+					<span class="icon-label">map-icon-aquarium</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-casino"></span>
+					<span class="icon-label">map-icon-casino</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-movie-theater"></span>
+					<span class="icon-label">map-icon-movie-theater</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-night-club"></span>
+					<span class="icon-label">map-icon-night-club</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-zoo"></span>
+					<span class="icon-label">map-icon-zoo</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-bowling-alley"></span>
+					<span class="icon-label">map-icon-bowling-alley</span>
+				</li>
+			</ul>
+
+			<!-- Services -->
+			<h3 class="block-title">Services</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-storage"></span>
+					<span class="icon-label">map-icon-storage</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-electrician"></span>
+					<span class="icon-label">map-icon-electrician</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-moving-company"></span>
+					<span class="icon-label">map-icon-moving-company</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-painter"></span>
+					<span class="icon-label">map-icon-painter</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-plumber"></span>
+					<span class="icon-label">map-icon-plumber</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-roofing-contractor"></span>
+					<span class="icon-label">map-icon-roofing-contractor</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-general-contractor"></span>
+					<span class="icon-label">map-icon-general-contractor</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-locksmith"></span>
+					<span class="icon-label">map-icon-locksmith</span>
+				</li>
+			</ul>
+
+			<!-- Business -->
+			<h3 class="block-title">Business</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-insurance-agency"></span>
+					<span class="icon-label">map-icon-insurance-agency</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-lawyer"></span>
+					<span class="icon-label">map-icon-lawyer</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-real-estate-agency"></span>
+					<span class="icon-label">map-icon-real-estate-agency</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-travel-agency"></span>
+					<span class="icon-label">map-icon-travel-agency</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-accounting"></span>
+					<span class="icon-label">map-icon-accounting</span>
+				</li>
+			</ul>
+
+			<!-- Government -->
+			<h3 class="block-title">Government</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-courthouse"></span>
+					<span class="icon-label">map-icon-courthouse</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-political"></span>
+					<span class="icon-label">map-icon-political</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-local-government"></span>
+					<span class="icon-label">map-icon-local-government</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-embassy"></span>
+					<span class="icon-label">map-icon-embassy</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-city-hall"></span>
+					<span class="icon-label">map-icon-city-hall</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-fire-station"></span>
+					<span class="icon-label">map-icon-fire-station</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-police"></span>
+					<span class="icon-label">map-icon-police</span>
+				</li>
+			</ul>
+
+			<!-- Religious -->
+			<h3 class="block-title">Religious</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-place-of-worship"></span>
+					<span class="icon-label">map-icon-place-of-worship</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-church"></span>
+					<span class="icon-label">map-icon-church</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-mosque"></span>
+					<span class="icon-label">map-icon-mosque</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-synagogue"></span>
+					<span class="icon-label">map-icon-synagogue</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-hindu-temple"></span>
+					<span class="icon-label">map-icon-hindu-temple</span>
+				</li>
+			</ul>
+
+			<!-- Accessibility -->
+			<h3 class="block-title">Accessibility</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-wheelchair"></span>
+					<span class="icon-label">map-icon-wheelchair</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-closed-captioning"></span>
+					<span class="icon-label">map-icon-closed-captioning</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-open-captioning"></span>
+					<span class="icon-label">map-icon-open-captioning</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-sign-language"></span>
+					<span class="icon-label">map-icon-sign-language</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-volume-control-telephone"></span>
+					<span class="icon-label">map-icon-volume-control-telephone</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-low-vision-access"></span>
+					<span class="icon-label">map-icon-low-vision-access</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-braille"></span>
+					<span class="icon-label">map-icon-braille</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-audio-description"></span>
+					<span class="icon-label">map-icon-audio-description</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-assistive-listening-system"></span>
+					<span class="icon-label">map-icon-assistive-listening-system</span>
+				</li>
+			</ul>
+
+			<!-- User Interface -->
+			<h3 class="block-title">User Interface</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-search"></span>
+					<span class="icon-label">map-icon-search</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-location-arrow"></span>
+					<span class="icon-label">map-icon-location-arrow</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-zoom-out"></span>
+					<span class="icon-label">map-icon-zoom-out</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-zoom-out-alt"></span>
+					<span class="icon-label">map-icon-zoom-out-alt</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-zoom-in"></span>
+					<span class="icon-label">map-icon-zoom-in</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-zoom-in-alt"></span>
+					<span class="icon-label">map-icon-zoom-in-alt</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-crosshairs"></span>
+					<span class="icon-label">map-icon-crosshairs</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-compass"></span>
+					<span class="icon-label">map-icon-compass</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-expand"></span>
+					<span class="icon-label">map-icon-expand</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-fullscreen"></span>
+					<span class="icon-label">map-icon-fullscreen</span>
+				</li>
+			</ul>
+
+			<!-- Marker Icons -->
+			<h3 class="block-title">Marker Icons</h3>
+			<ul class="icons">
+				<li>
+					<span class="map-icon map-icon-map-pin"></span>
+					<span class="icon-label">map-icon-map-pin</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-square-pin"></span>
+					<span class="icon-label">map-icon-square-pin</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-route-pin"></span>
+					<span class="icon-label">map-icon-route-pin</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-shield"></span>
+					<span class="icon-label">map-icon-shield</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-circle"></span>
+					<span class="icon-label">map-icon-circle</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-square-rounded"></span>
+					<span class="icon-label">map-icon-square-rounded</span>
+				</li>
+				<li>
+					<span class="map-icon map-icon-square"></span>
+					<span class="icon-label">map-icon-square</span>
+				</li>
+			</ul>
+
+		</div>
+	</section>
+
+	<section id="markers" class="content">
+		<div class="container">
+		<h2>Markers</h2>
+		<div class="marker margin-top-medium">
+			<div class="marker-title">
+				<svg baseProfile="basic" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M24 0c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z"/></svg>
+				<h4>MAP_PIN</h4>
+			</div>
+			<div class="marker-content">
+				<pre><code class="hljs html">M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z</code></pre>
+			</div>
+		</div>
+		<div class="marker margin-top-medium">
+			<div class="marker-title">
+				<svg baseProfile="basic" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M45.5 0h-43v43h16.2l5.9 5 5.8-5h15.1z"/></svg>
+				<h4>SQUARE_PIN</h4>
+			</div>
+			<div class="marker-content">
+				<pre><code class="hljs html">M22-48h-44v43h16l6 5 6-5h16z</code></pre>
+			</div>
+		</div>
+		<div class="marker margin-top-medium">
+			<div class="marker-title">
+				<svg baseProfile="basic" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M42.7 16.2c.3-3.4 1.3-6.6 3.1-9.5l-7-6.7c-2.2 1.8-4.7 2.8-7.6 3-2.6.2-5.1-.2-7.4-1.4-2.3 1.1-4.8 1.6-7.4 1.4-2.7-.2-5.1-1.1-7.2-2.7l-6.9 6.7c1.7 2.9 2.7 6 2.9 9.2.1 1.5-.3 3.5-1.3 6.1-.5 1.5-.9 2.7-1.2 3.8-.2 1-.4 1.9-.4 2.5 0 2.8.8 5.3 2.4 7.5 1.3 1.6 3.5 3.4 6.4 5.4 3.3 1.6 5.8 2.6 7.6 3.1.5.2 1 .4 1.5.7l1.5.6c1.1.6 1.9 1.3 2.3 2.1.5-.8 1.3-1.5 2.4-2.1.7-.3 1.4-.6 1.9-.8.5-.2.9-.4 1.1-.5.4-.2.9-.4 1.5-.6.6-.2 1.4-.5 2.2-.8 1.7-.6 3-1.1 3.8-1.6 2.9-2 5-3.8 6.4-5.3 1.7-2.2 2.6-4.8 2.5-7.6-.1-1.3-.7-3.3-1.7-6.1-1.1-2.8-1.6-4.9-1.4-6.4z"/></svg>
+				<h4>SHIELD</h4>
+			</div>
+			<div class="marker-content">
+				<pre><code class="hljs html">M18.8-31.8c.3-3.4 1.3-6.6 3.2-9.5l-7-6.7c-2.2 1.8-4.8 2.8-7.6 3-2.6.2-5.1-.2-7.5-1.4-2.4 1.1-4.9 1.6-7.5 1.4-2.7-.2-5.1-1.1-7.3-2.7l-7.1 6.7c1.7 2.9 2.7 6 2.9 9.2.1 1.5-.3 3.5-1.3 6.1-.5 1.5-.9 2.7-1.2 3.8-.2 1-.4 1.9-.5 2.5 0 2.8.8 5.3 2.5 7.5 1.3 1.6 3.5 3.4 6.5 5.4 3.3 1.6 5.8 2.6 7.6 3.1.5.2 1 .4 1.5.7l1.5.6c1.2.7 2 1.4 2.4 2.1.5-.8 1.3-1.5 2.4-2.1.7-.3 1.3-.5 1.9-.8.5-.2.9-.4 1.1-.5.4-.1.9-.3 1.5-.6.6-.2 1.3-.5 2.2-.8 1.7-.6 3-1.1 3.8-1.6 2.9-2 5.1-3.8 6.4-5.3 1.7-2.2 2.6-4.8 2.5-7.6-.1-1.3-.7-3.3-1.7-6.1-.9-2.8-1.3-4.9-1.2-6.4z</code></pre>
+			</div>
+		</div>
+		<div class="marker margin-top-medium">
+			<div class="marker-title">
+				<svg baseProfile="basic" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M48 19.7c-.3-13.2-7.9-18.5-8.3-18.7l-1.2-.8-1.2.8c-2 1.4-4.1 2-6.1 2-3.4 0-5.8-1.9-5.9-1.9l-1.3-1.1-1.3 1.1c-.1.1-2.5 1.9-5.9 1.9-2.1 0-4.1-.7-6.1-2l-1.3-.8-1.2.8c-.8.5-7.9 5.8-8.2 18.7-.1 1.1 3 22.2 24 28.3 22.9-6.7 24.1-26.9 24-28.3z"/></svg>
+				<h4>ROUTE</h4>
+			</div>
+			<div class="marker-content">
+				<pre><code class="hljs html">M24-28.3c-.2-13.3-7.9-18.5-8.3-18.7l-1.2-.8-1.2.8c-2 1.4-4.1 2-6.1 2-3.4 0-5.8-1.9-5.9-1.9l-1.3-1.1-1.3 1.1c-.1.1-2.5 1.9-5.9 1.9-2.1 0-4.1-.7-6.1-2l-1.2-.8-1.2.8c-.8.6-8 5.9-8.2 18.7-.2 1.1 2.9 22.2 23.9 28.3 22.9-6.7 24.1-26.9 24-28.3z</code></pre>
+			</div>
+		</div>
+		<div class="marker margin-top-medium">
+			<div class="marker-title">
+				<svg baseProfile="basic" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M0 0h48v48h-48z"/></svg>
+				<h4>SQUARE</h4>
+			</div>
+			<div class="marker-content">
+				<pre><code class="hljs html">M-24-48h48v48h-48z</code></pre>
+			</div>
+		</div>
+		<div class="marker margin-top-medium">
+			<div class="marker-title">
+				<svg baseProfile="basic" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M48 40c0 4.4-3.6 8-8 8h-32c-4.4 0-8-3.6-8-8v-32c0-4.4 3.6-8 8-8h32c4.4 0 8 3.6 8 8v32z"/></svg>
+				<h4>SQUARE_ROUNDED</h4>
+			</div>
+			<div class="marker-content">
+				<pre><code class="hljs html">M24-8c0 4.4-3.6 8-8 8h-32c-4.4 0-8-3.6-8-8v-32c0-4.4 3.6-8 8-8h32c4.4 0 8 3.6 8 8v32z</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section id="usage" class="content">
+		<div class="container">
+			<h2>Usage</h2>
+			<p>Map Icons extends the <a href="https://developers.google.com/maps/documentation/javascript/reference#Marker">Google Maps Marker</a> Object to enable either an image or SVG marker to be used with the icon placed on top as a label.</p>
+
+			<h3 class="block-title">Include</h3>
+			<p>Include the fonts in the <code>dist/font</code> directory as well as the <code>dist/css/map-icons.css</code> stylesheet to use icons in markup as an icon font.</p>
+			<p>To use the icons with Google Maps include <code>dist/js/map-icons.js</code></p>
+
+			<h3 class="block-title">Classes</h3>
+			<p>Icon class names are to be used with the <code>map-icon</code> class prefix.</p>
+
+			<pre><code class="hljs html">&lt;span class="map-icon map-icon-point-of-interest"&gt;&lt;/span&gt;</code></pre>
+			<h3 class="block-title">Styling the Icon</h3>
+			<p>Styles to icons can be applied with the <code>.map-icon</code> CSS selector.</p>
+<pre><code class="hljs css">.map-icon {
+	...
+}</code></pre>
+			<p>Explicit styles to icons being used on a Google Map should be applied with <code>.map-icon-label .map-icon</code> CSS selector.</p>
+<pre><code class="hljs css">.map-icon-label .map-icon {
+	font-size: 24px;
+	color: #FFFFFF;
+	line-height: 48px;
+	text-align: center;
+	white-space: nowrap;
+}</code></pre>
+
+			<h3 class="block-title">Creating a Marker</h3>
+			<p>Markers are created just like a normal Google Maps Marker, however, the class is extended for the <code>map_icon_label</code> property to add in markup for marker labels.</p>
+            <p><strong>Note:</strong> You should be creating an instance of <code>Marker</code> rather than <code>google.maps.Marker</code> in order for the functionality added by <code>map_icon_label</code> to work.</p>
+<pre><code class="hljs javascript">var marker = new Marker({
+	map: map,
+	position: new google.maps.LatLng(-27.46577, 153.02303),
+	icon: {
+		path: SQUARE_PIN,
+		fillColor: '#00CCBB',
+		fillOpacity: 1,
+		strokeColor: '',
+		strokeWeight: 0
+	},
+	map_icon_label: '&lt;span class="map-icon map-icon-point-of-interest"&gt;&lt;/span&gt;'
+});</code></pre>
+
+		</div>
+	</div>
+	</section>
+
+	<section id="licence" class="licence">
+		<div class="container">
+			<h2>License</h2>
+			<div class="row">
+				<div class="column-1-3">
+					<h3>Font License</h3>
+					<p class="max-width-xsmall">Applies to font files inside: <code>dist</code> directory.</p></p>
+					<p>Map Icons licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a></p>
+				</div>
+				<div class="column-1-3">
+					<h3>Code License</h3>
+					<p class="max-width-xsmall">Applies to code inside: <code>dist</code> directory.</p>
+					<p>Code licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT License</a></p>
+				</div>
+				<div class="column-1-3">
+					<h3>Documentation License</h3>
+					<p class="max-width-xsmall">Applies to files not a part of other licenses.</p>
+					<p>Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<p>
+				Map Icons v3.0.2 Created &amp; Maintained by Scott de Jonge
+				<a href="http://scottdejonge.com/">Website</a> &middot; 
+				<a href="http://twitter.com/scottdejonge">Twitter</a>
+			</p>
+			<p>
+				Map Icons licensed under
+				<a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a> &middot; 
+				Code licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT License</a> &middot; 
+				Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
+			</p>
+			<p>
+				<a href="https://github.com/scottdejonge/Map-Icons">GitHub Project</a> &middot; 
+				<a href="https://github.com/scottdejonge/Map-Icons/issues">Issues</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- Syntax Highlighting -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/github.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/languages/javascript.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/languages/css.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

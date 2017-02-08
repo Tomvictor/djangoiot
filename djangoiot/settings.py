@@ -23,10 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5k!%*$$02$%(@let+@8%6on0zosj&#wposzp$2w9ch)h5#x^pm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+ADMINS = [('tomvictor', 'vjtomvictor@gmail.com'), ('tomgmail', 'vjtomvictor@gmail.com')]
+
+
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['www.kranioz.com','kranioz.com']
 
 # Application definition
 
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mysite',
     'rest_framework',
+    'crispy_forms',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -123,3 +127,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+#media files uploaded by user
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = "/"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

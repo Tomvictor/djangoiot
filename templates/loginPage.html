@@ -1,0 +1,221 @@
+{% load staticfiles %}
+{#{% load crispy_forms_tags %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>kranioz | tracking device</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/fav-icon.png" type="image/x-icon">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      background: linear-gradient(267deg, #020202, #050908, #090304, #0f0200, #090908, #1a0208, #16010a, #050314);
+background-size: 1600% 1600%;
+
+-webkit-animation: AnimationName 59s ease infinite;
+-moz-animation: AnimationName 59s ease infinite;
+animation: AnimationName 59s ease infinite;
+
+
+  }
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #cc8383;
+}
+
+
+    .footer{
+      margin-top: 1%;
+
+    }
+
+    .footer p a{
+      text-decoration: none;
+      margin-right: 2em;
+      margin-top: 2em;
+      color: #474141;
+    }
+
+    .footer p a:hover{
+      text-decoration: none;
+      margin-right: 2em;
+      margin-top: 2em;
+      color: #da8737;
+    }
+
+    #footer p a{
+      text-decoration: none;
+      margin-right: 0em;
+      margin-top: 2em;
+      color: #474141;
+    }
+
+    .login h4{
+      color: #b20a0a;
+    }
+
+    .login-form{
+      padding-bottom: 2em;
+    }
+
+
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+ <div class="container">
+   <div class="row">
+     <div class="col-sm-8 col-sm-offset-2" style="background-color: white; margin-top: 5%; border-radius: 2px;">
+       <center><img class="img-responsive" src="{% static 'kranioz-logo.png' %}" alt="KRANIOZ">
+       </center> <br>
+
+
+       <div class="col-sm-6 col-sm-offset-3 login-form">
+       <!--<span class="login"><h4><b>Login </b></h4></span> -->
+
+           <form id="loginform" action="/homelogin/" method="post">
+                        {% csrf_token %}
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="email" id="form9" class="form-control validate" name="loginemail"
+                                   placeholder="Your email">
+                            <label for="form9" data-error="invalid e-mail" data-success=""></label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix"></i>
+                            <input type="password" id="loginpassword" name="loginpassword" class="form-control"
+                                   placeholder="Your password">
+                            <label for="form3"></label>
+                        </div>
+
+
+               <div class="checkbox">
+      <label><input class="btn btn-info" type="checkbox"> Remember me</label>
+    </div>
+      <button type="submit" class="btn btn-lg btn-block btn-success" style="border-radius: 1px;">Login</button>
+
+                    </form>
+  <br>
+  <!--<p><form class="form-inline">
+    <input type="email" class="form-control" size="30" placeholder="Email Address" required>
+    <button type="button" class="btn btn-info" style="border-radius: 0px;">Subscribe</button>
+  </form></p> -->
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+
+<footer class="container-fluid text-center footer" style="bottom: 10%;">
+  <a href="#myPage" title="To Top">
+    <!--<span class="glyphicon glyphicon-chevron-up"></span> -->
+  </a>
+  <br>
+  <p><a href="#" title="technorip innovations pvt. ltd">About</a> <a href="#">Faq</a> <a href="#">Contact</a></p>
+  <span id="footer">
+    <p>© Copyright 2016 by &nbsp;<a style="color: #5daad0;" href="http://www.technorip.com/" target="_blank">Technorip</a>&nbsp;Innovations Pvt.Ltd.&nbsp;&nbsp;All Rights Reserved.</p>
+  </span>
+
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>

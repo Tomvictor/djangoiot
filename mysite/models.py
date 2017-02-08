@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.conf import settings
 
 # Create your models here.
 
@@ -20,3 +21,18 @@ class Gps(models.Model):
 
     def __str__(self):
         return self.deviceId
+
+class Account(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)
+    mobile_no = models.CharField(max_length=20, default="+91")
+    date_of_birth = models.DateField(default=timezone.now())
+    gender_choice = (
+        ('M', 'Male'), ('F', 'Female')
+    )
+    gender = models.CharField(max_length=10, choices=gender_choice, default='M')
+    profilePic = models.FileField(upload_to='profile/', blank=False, default='img/avatar5.png')
+    verificationCode = models.CharField(max_length=250, default='zxsaqw')
+
+    def __str__(self):
+        return self.user.username
+
