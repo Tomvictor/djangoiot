@@ -34,7 +34,7 @@ def home(request):
         "drawable":draw,
         "mapobjects":all_entries
     }
-    return render(request,'baseAdmin.html',context_pass)
+    return render(request,'console_home.html',context_pass)
 
 def store(request):
     message = request.GET.get("q")

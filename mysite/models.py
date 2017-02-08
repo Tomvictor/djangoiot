@@ -23,7 +23,7 @@ class Gps(models.Model):
         return self.deviceId
 
 class Account(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE, primary_key=True)
     mobile_no = models.CharField(max_length=20, default="+91")
     date_of_birth = models.DateField(default=timezone.now())
     gender_choice = (
@@ -36,3 +36,28 @@ class Account(models.Model):
     def __str__(self):
         return self.user.username
 
+class Device(models.Model):
+    account = models.ManyToManyField(Account)
+    name = models.CharField(max_length=100,blank=True)
+
+    def __str__(self):
+        return self.name
+
+class DeviceStatus(models.Model):
+    device = models.ForeignKey(Device)
+    range_choice = (
+        ('In','InRange'), ('Out','OutOfRange')
+    )
+    range = models.CharField(max_length=50, choices=range_choice, default='In')
+    battery_state = models.IntegerField(blank=True)
+    raw_gps = models.TextField(blank=True)
+    latitude = models.CharField(max_length=150, blank=True)
+    longitude = models.CharField(max_length=150, blank=True)
+    status_choice = (
+        ('Online', 'Online'), ('Offline', 'Offline')
+    )
+    status = models.CharField(max_length=50, choices=status_choice, default='Online')
+    timestamp = models.DateTimeField(default=timezone.now())
+
+    def __str__(self):
+        return self.range

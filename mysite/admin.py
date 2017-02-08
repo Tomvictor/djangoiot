@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Mqtt,Gps
-
-from . models import Account
+from .models import Mqtt,Gps, Device,DeviceStatus,Account
 
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
@@ -11,6 +9,8 @@ admin.site.register(Account)
 admin.site.register(Mqtt)
 
 admin.site.register(Gps)
+admin.site.register(Device)
+admin.site.register(DeviceStatus)
 
 
 # Define an inline console descriptor for Employee model
