@@ -328,8 +328,8 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center:  {lat: 10.055788, lng: 76.356153}
+          zoom: 17,
+          center:  {{ center }}
         });
 
         setMarkers(map);
@@ -338,11 +338,8 @@
       // Data for the markers consisting of a name, a LatLng and a zIndex for the
       // order in which these markers should display on top of each other.
       var beaches = [
-        ['Bondi Beach', 10.061358, 76.364752, 4, 'www.google.com'],
-        ['Coogee Beach', 10.071358, 76.464752, 5, 'www.google.com'],
-        ['Cronulla Beach', 10.081358, 76.374752, 3, 'www.google.com'],
-        ['Manly Beach', 10.051358, 76.354752, 2, 'www.google.com'],
-        ['Maroubra Beach', 10.081358, 76.284752, 1, 'www.google.com']
+        ['Bondi Beach', {{ latest.lat }}, {{ latest.lng }}, 4, 'www.google.com'],
+
       ];
 
 

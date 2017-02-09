@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23608b6d-3383-401f-b444-ad41d96fbe8c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/urls.py" afterPath="$PROJECT_DIR$/mysite/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/views.py" afterPath="$PROJECT_DIR$/mysite/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/baseAdmin.html" afterPath="$PROJECT_DIR$/templates/baseAdmin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/console_home.html" afterPath="$PROJECT_DIR$/templates/console_home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/singleDevice.html" afterPath="$PROJECT_DIR$/templates/singleDevice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/test.html" afterPath="$PROJECT_DIR$/templates/test.html" />
     </list>
     <ignored path="djangoiot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,23 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseAdmin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/baseAdmin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="473" column="14" selection-start-line="473" selection-start-column="14" selection-end-line="473" selection-end-column="14" />
-              <folding>
-                <marker date="1486644881000" expanded="false" signature="19223:19229" ph="©" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console_home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="console_home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/console_home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="341" column="8" selection-start-line="341" selection-start-column="8" selection-end-line="344" selection-end-column="69" />
+            <state relative-caret-position="154">
+              <caret line="330" column="18" selection-start-line="330" selection-start-column="18" selection-end-line="330" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -86,23 +72,23 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="90">
+              <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
                 <element signature="e#703#776#0" expanded="false" />
-                <element signature="e#2356#2674#0" expanded="false" />
-                <element signature="e#4553#4681#0" expanded="false" />
+                <element signature="e#2597#2915#0" expanded="false" />
+                <element signature="e#4794#4922#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singleDevice.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="singleDevice.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/singleDevice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-448">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="436">
+              <caret line="215" column="56" selection-start-line="215" selection-start-column="56" selection-end-line="215" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -146,9 +132,9 @@
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/mysite/urls.py" />
         <option value="$PROJECT_DIR$/mysite/views.py" />
-        <option value="$PROJECT_DIR$/templates/singleDevice.html" />
         <option value="$PROJECT_DIR$/templates/baseAdmin.html" />
         <option value="$PROJECT_DIR$/templates/console_home.html" />
+        <option value="$PROJECT_DIR$/templates/singleDevice.html" />
       </list>
     </option>
   </component>
@@ -1086,29 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/singleDevice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-448">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-            <element signature="e#703#776#0" expanded="false" />
-            <element signature="e#2356#2674#0" expanded="false" />
-            <element signature="e#4553#4681#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1119,19 +1082,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/baseAdmin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="473" column="14" selection-start-line="473" selection-start-column="14" selection-end-line="473" selection-end-column="14" />
-          <folding>
-            <marker date="1486644881000" expanded="false" signature="19223:19229" ph="©" />
-          </folding>
+        <state relative-caret-position="188">
+          <caret line="475" column="0" selection-start-line="475" selection-start-column="4" selection-end-line="480" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/console_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="341" column="8" selection-start-line="341" selection-start-column="8" selection-end-line="344" selection-end-column="69" />
+        <state relative-caret-position="154">
+          <caret line="330" column="18" selection-start-line="330" selection-start-column="18" selection-end-line="330" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#703#776#0" expanded="false" />
+            <element signature="e#2597#2915#0" expanded="false" />
+            <element signature="e#4794#4922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/singleDevice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="215" column="56" selection-start-line="215" selection-start-column="56" selection-end-line="215" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -49,18 +49,23 @@ def console(request):
     all_entries = Gps.objects.order_by("-time")
     table_entries = Gps.objects.order_by("-time")
     latest = Gps.objects.last()
-    # print(latest.lat)
     current_user_acc = Account.objects.get(user=request.user)
+    str = "{lat:" + latest.lat + ",lng:" + latest.lng + "}"
+    print(str)
+    # {lat: 10.055788, lng: 76.356153}
     context_pass = {
         "objects":table_entries,
         "lat":latest.lat,
         "lng":latest.lng,
         "mapobjects":all_entries,
-        "Account": current_user_acc
+        "Account": current_user_acc,
+        "latest" :latest,
+        "center" : str,
     }
     return render(request,'console_home.html',context_pass)
 
 def singleDevice(request):
+    current_user_acc = Account.objects.get(user=request.user)
     table_entries = Gps.objects.order_by("time")
     current_location = table_entries.last()
     print(current_location.lat)
@@ -70,7 +75,8 @@ def singleDevice(request):
     print(str)
     context_pass = {
         "objects": table_entries,
-        "last_obj": str
+        "last_obj": str,
+        "Account": current_user_acc,
     }
     return render(request,'singleDevice.html',context_pass)
 
