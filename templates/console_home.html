@@ -9,6 +9,70 @@
 {% endblock %}
 
 
+{% block profile %}
+
+    <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="{{ Account.profilePic.url }}" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{ user.username }}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="{{ Account.profilePic.url }}" class="img-circle" alt="User Image">
+
+                <p>
+
+                  <small></small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+
+     <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="{{ Account.profilePic.url }}" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>{{ user.first_name }}</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+
+{% endblock %}
+
+
 {% block content %}
 
 
@@ -656,64 +720,16 @@
                   </tr>
                   </thead>
                   <tbody id="refresh">
-                  <tr>
-                    <td><a href="device.html">OR9842</a></td>
-                    <td>-33.91721</td>
-                    <td>151.22630</td>
-                    <td>60%</td>
-                    <td><span class="label label-success">in-range</span></td>
 
-                  </tr>
-                  <tr>
-                    <td><a href="device.html">OR1848</a></td>
-                    <td>-33.91539</td>
-                    <td>151.22820</td>
-                    <td>60%</td>
-                    <td><span class="label label-success">in-range</span></td>
 
-                  </tr>
                   <tr>
-                    <td><a href="device.html">OR7429</a></td>
-                    <td>-33.91747</td>
-                    <td>151.22912</td>
-                    <td>70%</td>
-                    <td><span class="label label-success">in-range</span></td>
-                  </tr>
-                  <tr>
-                    <td><a href="device.html">OR7429</a></td>
-                    <td>-33.91910</td>
-                    <td> 151.22907</td>
-                    <td>68%</td>
-                    <td><span class="label label-danger">out of-range</span></td>
-                  </tr>
-                  <tr>
-                    <td><a href="device.html">OR1848</a></td>
-                    <td>-33.91725</td>
-                    <td> 151.23011</td>
-                    <td style="color: red;">16%</td>
-                    <td><span class="label label-danger">out of-range</span></td>
-                  </tr>
-                  <tr>
-                    <td><a href="device.html">OR7429</a></td>
-                    <td>-33.91747</td>
-                    <td>151.22912</td>
-                    <td>70%</td>
-                    <td><span class="label label-success">in-range</span></td>
-                  </tr>
-                  <tr>
-                    <td><a href="device.html">OR9842</a></td>
-                    <td>-33.91747</td>
-                    <td>151.22912</td>
-                    <td style="color: red;">10%</td>
-                    <td><span class="label label-success">in-range</span></td>
-                  </tr>
-                  <tr>
-                    <td><a href="device.html">OR1848</a></td>
+                    <td><a href="/single">OR1848</a></td>
                     <td>-33.91725</td>
                     <td> 151.23011</td>
                     <td style="color: red;">19%</td>
                     <td><span class="label label-danger">out of-range</span></td>
                   </tr>
+
                   </tbody>
                 </table>
               </div>

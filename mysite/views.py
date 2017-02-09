@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,HttpResponseRedirect,redirect
 from django.http import HttpResponse
-from .models import Mqtt,Gps
+from .models import Mqtt,Gps,Account,DeviceStatus,Device
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.contrib import messages
@@ -10,15 +10,20 @@ import requests
 
 # Create your views here.
 
+def homePage(request):
+    return render(request,'index.html',{})
+
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect("mysite:console-home")
     return render(request,"loginPage.html", {})
 
 def beta(request):
     return HttpResponseRedirect('http://kranioz.com/static/demo/index2.html')
 
 @login_required
-def home(request):
+def oldHome(request):
     all_entries = Gps.objects.order_by("-time")
     table_entries = Gps.objects.order_by("-time")
     latest = Gps.objects.last()
@@ -44,21 +49,22 @@ def console(request):
     table_entries = Gps.objects.order_by("-time")
     latest = Gps.objects.last()
     # print(latest.lat)
-    url = "http://kranioz.com/api/map/?format=json"
-    r = requests.get(url)
-    draw = r.json()
-    print(r.json())
+    current_user_acc = Account.objects.get(user=request.user)
     context_pass = {
         "objects":table_entries,
         "lat":latest.lat,
         "lng":latest.lng,
-        "drawable":draw,
-        "mapobjects":all_entries
+        "mapobjects":all_entries,
+        "Account": current_user_acc
     }
     return render(request,'console_home.html',context_pass)
 
 def singleDevice(request):
-    return render(request,'singleDevice.html',{})
+    table_entries = Gps.objects.order_by("-time")
+    context_pass = {
+        "objects": table_entries
+    }
+    return render(request,'singleDevice.html',context_pass)
 
 
 def store(request):
@@ -111,7 +117,7 @@ def Homelogin(request):
             if user.is_active:
                 auth_login(request, user)
                 messages.success(request, "You have been securely logged in")
-                return redirect("mysite:homePage")
+                return redirect("mysite:console-home")
             else:
                 messages.success(request, "The password is valid, but the account has been disabled!"
                                           " Please contact us, mail : bosch@makervillage.in")
