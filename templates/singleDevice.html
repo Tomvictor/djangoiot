@@ -109,21 +109,7 @@
             <!-- /.col -->
         </div>
         <!-- info row -->
-        <div class="row invoice-info">
 
-            <div class="col-sm-4 invoice-col">
-
-            </div>
-            <!-- /.col -->
-            <div class="col-sm-4 invoice-col">
-
-            </div>
-            <!-- /.col -->
-            <div class="col-sm-4 invoice-col">
-
-            </div>
-            <!-- /.col -->
-        </div>
         <!-- /.row -->
 
         <!-- Table row -->
@@ -140,10 +126,6 @@
                     </tr>
                     </thead>
                     <tbody id="refresh">
-
-
-
-
 
 
 
@@ -196,14 +178,14 @@ $(document).ready(function() {
             $("#dragon").css("background-color","red")    ;
             for (results in result) {
 
-                var data = result[results]
+                var data = result[results] ;
                 if(data.status==1){
                     var button='<span class="label label-success">In-range</span>';
-                    $("#dragon").css("background-color","green")
+
                 }
                 else {
                     var button='<span class="label label-danger">Out of-range</span>';
-                    $("#dragon").css("background-color","red")
+
                 }
                 content += '<tr id="dragon">';
                 content += '<td>' + data.time + '</td>';
@@ -212,10 +194,13 @@ $(document).ready(function() {
                 content += '<td>' + data.battery + '</td>';
                 content += '<td>' + button + '</td>';
                 content += '</tr>';
+
             }
-              $("#dragon").css("background-color","red")
-            $("#refresh").html(content)
+
+            $("#refresh").html(content);
+
         });
+
     });
 });
 </script>
