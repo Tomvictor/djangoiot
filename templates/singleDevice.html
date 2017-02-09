@@ -1,0 +1,228 @@
+{% extends "baseAdmin.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block extrahead %}
+
+    <title>Kranioz | Console</title>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Device ID
+        <small>#007612</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Devices</a></li>
+        <li class="active">#007612</li>
+      </ol>
+    </section>
+
+    <!-- MAP -->
+
+      <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <div class="container">
+      <div class="row" style="height: 333px;">
+        <div id="map"></div>
+    <script>
+
+      // This example creates a 2-pixel-wide red polyline showing the path of William
+      // Kingsford Smith's first trans-Pacific flight between Oakland, CA, and
+      // Brisbane, Australia.
+      var marker;
+
+     function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: {lat: 10.061358, lng: 76.364752}
+  });
+
+  var image = '{% static 'lte/img/maker-1.png' %}';
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 10.061358, lng: 76.364752},
+    map: map,
+    icon: image
+  });
+
+  marker = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 59.327, lng: 18.067}
+        });
+        marker.addListener('click', toggleBounce);
+      }
+
+      function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9a2IA4bCX2nRqDwW4ttHqy7THyjjxFCk&callback=initMap">
+    </script>
+
+
+    <!-- End of Map -->
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i>Device Info
+            <small class="pull-right"></small>
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+
+        <div class="col-sm-4 invoice-col">
+
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Date & Time</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
+                    <th>Battery</th>
+                    <th>Status</th>
+            </tr>
+            </thead>
+            <tbody id="refresh">
+             <tr>
+                    <td><a href="device.html">08-02-2017 - 14:55</a></td>
+                    <td>-33.91721</td>
+                    <td>151.22630</td>
+                    <td>60%</td>
+                    <td><span class="label label-success">in-range</span></td>
+
+                  </tr>
+                  <tr>
+                    <td><a href="device.html">08-02-2017 - 14:54</a></td>
+                    <td>-33.91539</td>
+                    <td>151.22820</td>
+                    <td>60%</td>
+                    <td><span class="label label-success">in-range</span></td>
+
+                  </tr>
+                  <tr>
+                    <td><a href="device.html">08-02-2017 - 14:53</a></td>
+                    <td>-33.91747</td>
+                    <td>151.22912</td>
+                    <td>70%</td>
+                    <td><span class="label label-success">in-range</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="device.html">08-02-2017 - 14:52</a></td>
+                    <td>-33.91910</td>
+                    <td> 151.22907</td>
+                    <td>68%</td>
+                    <td><span class="label label-danger">out of-range</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="device.html">08-02-2017 - 14:51</a></td>
+                    <td>-33.91725</td>
+                    <td> 151.23011</td>
+                    <td style="color: red;">16%</td>
+                    <td><span class="label label-danger">out of-range</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="device.html">08-02-2017 - 14:50</a></td>
+                    <td>-33.91747</td>
+                    <td>151.22912</td>
+                    <td>70%</td>
+                    <td><span class="label label-success">in-range</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="device.html">08-02-2017 - 14:49</a></td>
+                    <td>-33.91747</td>
+                    <td>151.22912</td>
+                    <td style="color: red;">10%</td>
+                    <td><span class="label label-success">in-range</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="device.html">08-02-2017 - 14:48</a></td>
+                    <td>-33.91725</td>
+                    <td> 151.23011</td>
+                    <td style="color: red;">19%</td>
+                    <td><span class="label label-danger">out of-range</span></td>
+                  </tr>
+            </tbody>
+          </table>
+          <center><a href="">view all</a></center>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+      <!-- this row will not appear when printing -->
+      <div class="row no-print">
+        <div class="col-xs-12">
+          <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+          <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
+          </button>
+          <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+            <i class="fa fa-download"></i> Generate PDF
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+
+
+
+{% endblock %}
+
+
+

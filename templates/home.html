@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
 <h2 style="text-align: center"> Technorip IoT | <a href="/api/" target="_blank">APIs</a> | <a href="/api/create/" target="_blank">Create</a> |
-    <a href="/latest/" target="_blank">Latest</a> | GET (/log/?lat=value1&lng=value2&id=value3&bat=value3)
+    <a href="/latest/" target="_blank">Latest</a> | GET (/log/?lat=value1&lng=value2&id=value3&bat=value3&status=value4)
     <a href="/logout/">Logout</a>
 </h2>
 
@@ -128,7 +128,7 @@ $(document).ready(function(){
                 <td>{{ object.deviceId }}</td>
                 <td> {{ object.lat }} </td>
                 <td> {{ object.lng }} </td>
-            <td>  {{ object.speed }} %</td>
+            <td>  {{ object.battery }} %</td>
 
             </tr>
 

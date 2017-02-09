@@ -12,7 +12,7 @@ class MsgListSerializer(ModelSerializer):
             'id',
             'lat',
             'lng',
-            'speed',
+            'battery',
             'deviceId',
             'time'
         ]
@@ -31,7 +31,7 @@ class MsgCreateSerializer(ModelSerializer):
         fields = [
             'lat',
             'lng',
-            'speed',
+            'battery',
             'deviceId',
         ]
 
@@ -43,7 +43,7 @@ class MsgDetailSerializer(ModelSerializer):
             'id',
             'lat',
             'lng',
-            'speed',
+            'battery',
             'deviceId',
             'time'
         ]

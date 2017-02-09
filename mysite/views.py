@@ -34,7 +34,32 @@ def home(request):
         "drawable":draw,
         "mapobjects":all_entries
     }
+    return render(request,'home.html',context_pass)
+
+
+
+@login_required
+def console(request):
+    all_entries = Gps.objects.order_by("-time")
+    table_entries = Gps.objects.order_by("-time")
+    latest = Gps.objects.last()
+    # print(latest.lat)
+    url = "http://kranioz.com/api/map/?format=json"
+    r = requests.get(url)
+    draw = r.json()
+    print(r.json())
+    context_pass = {
+        "objects":table_entries,
+        "lat":latest.lat,
+        "lng":latest.lng,
+        "drawable":draw,
+        "mapobjects":all_entries
+    }
     return render(request,'console_home.html',context_pass)
+
+def singleDevice(request):
+    return render(request,'singleDevice.html',{})
+
 
 def store(request):
     message = request.GET.get("q")
@@ -57,7 +82,8 @@ def log_data(request):
         lng_info = request.GET.get("lng")
         bat = request.GET.get("bat")
         device_info = request.GET.get("id")
-        this_object = Gps(lat=lat_info,lng=lng_info,deviceId=device_info,speed=bat)
+        dev_status = request.GET.get("status")
+        this_object = Gps(lat=lat_info,lng=lng_info,deviceId=device_info,battery=bat, status=dev_status)
         this_object.save()
         #print(lat_info)
         return HttpResponse("Ok")
