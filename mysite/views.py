@@ -41,7 +41,8 @@ def oldHome(request):
     }
     return render(request,'home.html',context_pass)
 
-
+def test(request):
+    return render(request,'test.html',{})
 
 @login_required
 def console(request):

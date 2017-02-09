@@ -1,0 +1,160 @@
+{% extends "baseAdmin.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block extrahead %}
+
+    <title>Kranioz | Console</title>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Device ID
+            <small>#007612</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Devices</a></li>
+            <li class="active">#007612</li>
+        </ol>
+    </section>
+
+
+
+    <!-- End of Map -->
+
+    <!-- Main content -->
+    <section class="invoice">
+        <!-- title row -->
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="page-header">
+                    <i class="fa fa-globe"></i>Device Info
+                    <small class="pull-right"></small>
+                </h2>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- info row -->
+        <div class="row invoice-info">
+
+            <div class="col-sm-4 invoice-col">
+
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-4 invoice-col">
+
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-4 invoice-col">
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Table row -->
+        <div class="row">
+            <div class="col-xs-12 table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                        <th>Battery</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody id="refresh">
+
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+<button type="button" id="refreshbutton" style="visibility: hidden;display: none"></button>
+        <!-- this row will not appear when printing -->
+        <div class="row no-print">
+            <div class="col-xs-12">
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block extrafooter %}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function () {
+    setInterval(function(){
+    $("#refreshbutton").click();
+},1000);
+})
+</script>
+
+    <script>
+$(document).ready(function() {
+
+    $("#refreshbutton").click(function () {
+
+
+        $.getJSON("/api/?format=json", function (result) {
+            var content = "";
+            var button='<span class="label label-danger">Out of-range</span>';
+             var drag='<tr style="background-color:red">';
+
+            for (results in result) {
+
+                var data = result[results]
+                if(data.status==1){
+                    var button='<span class="label label-success">In-range</span>';
+                    var drag='<tr style="background-color:green">';
+                }
+                content += '<tr>';
+                content += '<td>' + data.time + '</td>';
+                content += '<td>' + data.lat + '</td>';
+                content += '<td>' + data.lng + '</td>';
+                content += '<td>' + data.battery + '</td>';
+                content += '<td>' + button + '</td>';
+                content += '</tr>';
+            }
+            $("#refresh").html(content)
+        });
+    });
+});
+</script>
+
+{% endblock %}

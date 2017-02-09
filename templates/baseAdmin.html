@@ -32,13 +32,13 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-
-    <script>
-var refreshId = setInterval(function()
-{
-     $('#refresh').fadeOut("slow").load('kranioz.com').fadeIn("slow");
-}, 5000);
-</script>
+{##}
+{#    <script>#}
+{#var refreshId = setInterval(function()#}
+{#{#}
+{#     $('#refresh').fadeOut("slow").load('kranioz.com').fadeIn("slow");#}
+{#}, 5000);#}
+{#</script>#}
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -674,6 +674,10 @@ var refreshId = setInterval(function()
 
 </div>
 <!-- ./wrapper -->
+
+{% block extrafooter %}
+{% endblock %}
+
 
 <!-- jQuery 2.2.3 -->
 <script src="{% static 'lte/plugins/jQuery/jquery-2.2.3.min.js' %}"></script>

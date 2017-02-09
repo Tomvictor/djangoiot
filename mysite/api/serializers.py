@@ -14,7 +14,8 @@ class MsgListSerializer(ModelSerializer):
             'lng',
             'battery',
             'deviceId',
-            'time'
+            'time',
+            'status',
         ]
 
 class MapSerializer(ModelSerializer):
@@ -33,6 +34,7 @@ class MsgCreateSerializer(ModelSerializer):
             'lng',
             'battery',
             'deviceId',
+            'status',
         ]
 
 
@@ -45,7 +47,8 @@ class MsgDetailSerializer(ModelSerializer):
             'lng',
             'battery',
             'deviceId',
-            'time'
+            'time',
+            'status',
         ]
 
 

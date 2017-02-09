@@ -24,7 +24,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("#div1").load("http://kranioz.com/api/map/?format=json");
+    setInterval(function () {
+        $("#div1").load("http://kranioz.com/api/map/?format=json");
+    }, 3000)
+
 
 });
 </script>
