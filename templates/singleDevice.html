@@ -61,12 +61,12 @@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,
-                center: {lat: 10.061358, lng: 76.364752}
+                center: {{ last_obj }}
             });
 
             var image = '{% static 'lte/img/maker-1.png' %}';
             var beachMarker = new google.maps.Marker({
-                position: {lat: 10.061358, lng: 76.364752},
+                position:{},
                 map: map,
                 icon: image
             });
@@ -75,7 +75,7 @@
                 map: map,
                 draggable: true,
                 animation: google.maps.Animation.DROP,
-                position: {lat: 59.327, lng: 18.067}
+                position: {{ last_obj }}
             });
             marker.addListener('click', toggleBounce);
         }
@@ -142,25 +142,10 @@
                     <tbody id="refresh">
 
 
-                    {% for thisObject in objects %}
 
-                        <tr>
-                            <td>{{ thisObject.time }}</td>
-                            <td>{{ thisObject.lat }}</td>
-                            <td>{{ thisObject.lng }}</td>
-                            <td>{{ thisObject.battery }} %</td>
 
-                            {% if thisObject.status == "1" %}
 
-                                <td><span class="label label-success">In-range</span></td>
 
-                            {% elif thisObject.status == "0" %}
-
-                                <td><span class="label label-danger">Out of range</span></td>
-                            {% endif %}
-
-                        </tr>
-                    {% endfor %}
 
                     </tbody>
                 </table>
@@ -170,12 +155,14 @@
         <!-- /.row -->
 
 
+
         <!-- this row will not appear when printing -->
         <div class="row no-print">
             <div class="col-xs-12">
 
 
 
+                <button type="button" id="refreshbutton" style="visibility: hidden;display: none"></button>
             </div>
         </div>
     </section>
@@ -185,9 +172,51 @@
 {% endblock %}
 
 
+
 {% block extrafooter %}
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function () {
+    setInterval(function(){
+    $("#refreshbutton").click();
+},1000);
+})
+</script>
+
+    <script>
+$(document).ready(function() {
+
+    $("#refreshbutton").click(function () {
 
 
+        $.getJSON("/api/?format=json", function (result) {
+            var content = "";
+
+            $("#dragon").css("background-color","red")    ;
+            for (results in result) {
+
+                var data = result[results]
+                if(data.status==1){
+                    var button='<span class="label label-success">In-range</span>';
+                    $("#dragon").css("background-color","green")
+                }
+                else {
+                    var button='<span class="label label-danger">Out of-range</span>';
+                    $("#dragon").css("background-color","red")
+                }
+                content += '<tr id="dragon">';
+                content += '<td>' + data.time + '</td>';
+                content += '<td>' + data.lat + '</td>';
+                content += '<td>' + data.lng + '</td>';
+                content += '<td>' + data.battery + '</td>';
+                content += '<td>' + button + '</td>';
+                content += '</tr>';
+            }
+            $("#refresh").html(content)
+        });
+    });
+});
+</script>
 
 {% endblock %}

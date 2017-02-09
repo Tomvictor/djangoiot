@@ -61,9 +61,16 @@ def console(request):
     return render(request,'console_home.html',context_pass)
 
 def singleDevice(request):
-    table_entries = Gps.objects.order_by("-time")
+    table_entries = Gps.objects.order_by("time")
+    current_location = table_entries.last()
+    print(current_location.lat)
+    print(current_location.lng)
+    # {lat: 10.061358, lng: 76.364752}
+    str ="{lat:" + current_location.lat +",lng:"+ current_location.lng + "}"
+    print(str)
     context_pass = {
-        "objects": table_entries
+        "objects": table_entries,
+        "last_obj": str
     }
     return render(request,'singleDevice.html',context_pass)
 

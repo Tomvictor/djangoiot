@@ -133,17 +133,20 @@ $(document).ready(function() {
 
         $.getJSON("/api/?format=json", function (result) {
             var content = "";
-            var button='<span class="label label-danger">Out of-range</span>';
-             var drag='<tr style="background-color:red">';
 
+            $("#dragon").css("background-color","red")    ;
             for (results in result) {
 
                 var data = result[results]
                 if(data.status==1){
                     var button='<span class="label label-success">In-range</span>';
-                    var drag='<tr style="background-color:green">';
+                    $("#dragon").css("background-color","green")
                 }
-                content += '<tr>';
+                else {
+                    var button='<span class="label label-danger">Out of-range</span>';
+                    $("#dragon").css("background-color","red")
+                }
+                content += '<tr id="dragon">';
                 content += '<td>' + data.time + '</td>';
                 content += '<td>' + data.lat + '</td>';
                 content += '<td>' + data.lng + '</td>';
