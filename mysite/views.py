@@ -14,6 +14,7 @@ def homePage(request):
     return render(request,'index.html',{})
 
 
+
 def login(request):
     if request.user.is_authenticated:
         return redirect("mysite:console-home")

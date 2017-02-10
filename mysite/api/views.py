@@ -15,7 +15,7 @@ class MsgCreateAPIView(CreateAPIView):
 
 
 class MsgListAPIView(ListAPIView):
-    queryset = Gps.objects.all()
+    queryset = Gps.objects.all().order_by("-time")
     serializer_class = MsgListSerializer
 
 
