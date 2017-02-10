@@ -49,8 +49,39 @@
     </style>
 
     <div class="container">
+    <div class="row">
+     <div class="col-md-3 col-sm-4">
+                  <div class="pad box-pane-right" id="infobox" style="min-height: 280px">
+                    <div class="description-block margin-bottom">
+                      <div class="sparkbar pad" data-color="#fff"><canvas width="34" height="30" style="display: inline-block; width: 34px; height: 30px; vertical-align: top;"></canvas></div>
+                      <h5 class="description-header">88</h5>
+                      <span class="description-text">active</span>
+                    </div>
+                    <!-- /.description-block -->
+                    <div class="description-block margin-bottom">
+                      <div class="sparkbar pad" data-color="#fff"><canvas width="34" height="30" style="display: inline-block; width: 34px; height: 30px; vertical-align: top;"></canvas></div>
+                      <h5 class="description-header" id="batteryinfo">Checking...</h5>
+                      <span class="description-text">Battery Percentage</span>
+                    </div>
+                    <!-- /.description-block -->
+                    <div class="description-block">
+                      <div class="sparkbar pad" data-color="#fff"><canvas width="34" height="30" style="display: inline-block; width: 34px; height: 30px; vertical-align: top;"></canvas></div>
+                      <h5 class="description-header" id="rangeinfo">Checking...</h5>
+                      <span class="description-text" >Location Status</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                </div>
+    </div>
     <div class="row" style="height: 333px;">
-    <div id="map"></div>
+    <div id="map" >
+
+    </div>
+
+
+
+
+
     <script>
 
         // This example creates a 2-pixel-wide red polyline showing the path of William
@@ -166,6 +197,35 @@ $(function () {
 </script>
 
     <script>
+
+$(document).ready(function() {
+
+    $("#infobox").css("background-color","yellow");
+    $("#refreshbutton").click(function () {
+
+
+        $.getJSON("/latest", function (result) {
+
+
+
+            if(result.status==0){
+                $("#infobox").css("background-color","red");
+                $("#rangeinfo").html("Out of range");
+                $("#batteryinfo").html(result.battery );
+
+            }
+            else{
+                $("#infobox").css("background-color","green");
+                  $("#rangeinfo").html("In range");
+                     $("#batteryinfo").html(result.battery);
+            }
+
+        });
+    });
+});
+    </script>
+
+    <script>
 $(document).ready(function() {
 
     $("#refreshbutton").click(function () {
@@ -181,9 +241,12 @@ $(document).ready(function() {
                 if(data.status==1){
                     var button='<span class="label label-success">In-range</span>';
 
+
                 }
                 else {
                     var button='<span class="label label-danger">Out of-range</span>';
+
+
 
                 }
                 content += '<tr id="dragon">';
